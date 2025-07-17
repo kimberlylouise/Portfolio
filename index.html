@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Portfolio</title>
+    <meta name="description" content="IT Professional Portfolio showcasing skills, projects, and experience">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Kimberly Ravalo</a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                
+                <!-- Theme Toggle -->
+            
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="animated-bg"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hello, I'm</span>
+                        <span class="name">Kimberly</span>
+                        <span class="profession-container">
+                            <span class="profession-text" id="profession-text">Front-end Developer</span>
+                        </span>
+                    </h1>
+                    <p class="hero-description">
+                        I am a graduating student from Cavite State University seeking opportunities in IT and web development.
+                        I am passionate about learning new technologies and building real-world solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-code"></i>
+                            View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="assets/profile-image.jpg" alt="Your Name" class="profile-img">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know more about my background and expertise</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-description">
+                        <p>
+                            I'm a passionate graduating student from Cavite State University - Imus Campus with a foundation in 
+                            information technology and web development. Throughout my academic journey, I've developed 
+                            a deep interest in creating innovative solutions and building user-friendly applications.
+                        </p>
+                        <p>
+                            My expertise spans across front-end and website development, with hands-on experience in 
+                            modern web technologies. I'm eager to apply my knowledge in real-world scenarios and 
+                            contribute to meaningful projects that make a difference.
+                        </p>
+                        <p>
+                            As I transition from academia to the professional world, I'm actively seeking opportunities 
+                            in IT and web development where I can grow, learn, and bring fresh perspectives to 
+                            challenging problems. I believe in continuous learning and staying updated with the latest 
+                            industry trends and best practices.
+                        </p>
+                    </div>
+                    
+                    
+                    <div class="about-actions">
+                        <a href="assets/resume.pdf" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-download"></i>
+                            Download Resume
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-user"></i>
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            
+            <div class="skills-content">
+                <!-- Programming Languages -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Programming Languages
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>JavaScript</h4>
+                                <p class="skill-description">Modern ES6+ features, DOM manipulation, and async programming</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>HTML5</h4>
+                                <p class="skill-description">Semantic markup, accessibility, and modern web standards</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>CSS3</h4>
+                                <p class="skill-description">Flexbox, Grid, animations, and responsive design</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>PHP</h4>
+                                <p class="skill-description">Server-side scripting and web application development</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Python</h4>
+                                <p class="skill-description">General-purpose programming and web development</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>SQL</h4>
+                                <p class="skill-description">Database queries, joins, and data management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend & Databases -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        Backend & Databases
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Node.js</h4>
+                                <p class="skill-description">JavaScript runtime for server-side applications</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>MySQL</h4>
+                                <p class="skill-description">Relational database management and optimization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Development Tools -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        Development Tools & Platforms
+                    </h3>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-code"></i>
+                            <span>Visual Studio Code</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>Command Line</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Render</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Netlify</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Core Competencies -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-lightbulb"></i>
+                        Core Competencies
+                    </h3>
+                    <div class="competencies-grid">
+                        <div class="competency-item">
+                            <div class="competency-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>Responsive Design</h4>
+                            <p>Mobile-first approach and cross-browser compatibility</p>
+                        </div>
+                        
+                        <div class="competency-item">
+                            <div class="competency-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h4>UI/UX Design</h4>
+                            <p>User-centered design and modern web interfaces</p>
+                        </div>
+                        
+                        <div class="competency-item">
+                            <div class="competency-icon">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <h4>Version Control</h4>
+                            <p>Git workflows and collaborative development</p>
+                        </div>
+                        
+                        <div class="competency-item">
+                            <div class="competency-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4>Web Deployment</h4>
+                            <p>Cloud hosting and continuous deployment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A showcase of my recent work and accomplishments</p>
+            </div>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="api">API Development</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Paperazzi Project -->
+                <div class="project-card" data-category="other" data-gallery="paperazzi">
+                    <div class="project-image">
+                        <img src="assets/PAPERAZZI/1.png" alt="Paperazzi - Coin Operated Printing Machine">
+                        <div class="image-counter">
+                            <span>1 / 5</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="project-gallery-btn" aria-label="View Gallery">
+                                    <i class="fas fa-images"></i>
+                                </button>
+                                <a href="#" class="project-github" aria-label="View GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Paperazzi - Coin Operated Printing Machine</h3>
+                        <p class="project-description">
+                            An innovative coin-operated printing system built with Raspberry Pi 3B. 
+                            Features intuitive interface design, payment processing, and document management system.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Raspberry Pi</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">UI/UX Design</span>
+                            <span class="tech-tag">Hardware</span>
+                        </div>
+                        
+                        <!-- Gallery Preview -->
+                        <div class="project-gallery-preview">
+                            <div class="preview-thumbnails">
+                                <div class="thumb-item active" data-src="assets/PAPERAZZI/1.png" data-alt="Main Interface">
+                                    <img src="assets/PAPERAZZI/1.png" alt="Main Interface">
+                                </div>
+                                <div class="thumb-item" data-src="assets/PAPERAZZI/2.png" data-alt="Payment Screen">
+                                    <img src="assets/PAPERAZZI/2.png" alt="Payment Screen">
+                                </div>
+                                <div class="thumb-item" data-src="assets/PAPERAZZI/3.png" data-alt="Document Selection">
+                                    <img src="assets/PAPERAZZI/3.png" alt="Document Selection">
+                                </div>
+                                <div class="thumb-item" data-src="assets/PAPERAZZI/4.png" data-alt="Settings">
+                                    <img src="assets/PAPERAZZI/4.png" alt="Settings">
+                                </div>
+                                <div class="thumb-item" data-src="assets/PAPERAZZI/5.png" data-alt="Print Progress">
+                                    <img src="assets/PAPERAZZI/5.png" alt="Print Progress">
+                                </div>
+                            </div>
+                            <button class="view-all-btn" data-gallery="paperazzi">
+                                <i class="fas fa-expand"></i>
+                                View All Images
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kainimo Project -->
+                <div class="project-card" data-category="web" data-gallery="kainimo">
+                    <div class="project-image">
+                        <img src="assets/kainimo/1 (1).png" alt="Kainimo - Restaurant Finder in Imus, Cavite">
+                        <div class="image-counter">
+                            <span>1 / 4</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="project-gallery-btn" aria-label="View Gallery">
+                                    <i class="fas fa-images"></i>
+                                </button>
+                                <a href="#" class="project-github" aria-label="View GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Kainimo - Restaurant Finder</h3>
+                        <p class="project-description">
+                            A web application for finding the best places to eat in Imus, Cavite. 
+                            Features restaurant listings, reviews, location mapping, and user-friendly search functionality.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                        </div>
+                        
+                        <!-- Gallery Preview -->
+                        <div class="project-gallery-preview">
+                            <div class="preview-thumbnails">
+                                <div class="thumb-item active" data-src="assets/kainimo/1 (1).png" data-alt="Homepage">
+                                    <img src="assets/kainimo/1 (1).png" alt="Homepage">
+                                </div>
+                                <div class="thumb-item" data-src="assets/kainimo/2 (2).png" data-alt="Restaurant Listings">
+                                    <img src="assets/kainimo/2 (2).png" alt="Restaurant Listings">
+                                </div>
+                                <div class="thumb-item" data-src="assets/kainimo/3 (1).png" data-alt="Restaurant Details">
+                                    <img src="assets/kainimo/3 (1).png" alt="Restaurant Details">
+                                </div>
+                                <div class="thumb-item" data-src="assets/kainimo/4 (1).png" data-alt="Search Results">
+                                    <img src="assets/kainimo/4 (1).png" alt="Search Results">
+                                </div>
+                            </div>
+                            <button class="view-all-btn" data-gallery="kainimo">
+                                <i class="fas fa-expand"></i>
+                                View All Images
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Smile Bright Dental Clinic Project -->
+                <div class="project-card" data-category="web" data-gallery="smilebright">
+                    <div class="project-image">
+                        <img src="assets/SMILE BRIGHT/1 (2).jpg" alt="Smile Bright - Dental Clinic Appointment System">
+                        <div class="image-counter">
+                            <span>1 / 13</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="project-gallery-btn" aria-label="View Gallery">
+                                    <i class="fas fa-images"></i>
+                                </button>
+                                <a href="#" class="project-github" aria-label="View GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Smile Bright - Dental Clinic System</h3>
+                        <p class="project-description">
+                            A comprehensive dental clinic management system for appointment booking, patient records, 
+                            service management, and clinic administration. Features online appointment scheduling and patient portal.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        
+                        <!-- Gallery Preview -->
+                        <div class="project-gallery-preview">
+                            <div class="preview-thumbnails">
+                                <div class="thumb-item active" data-src="assets/SMILE BRIGHT/1 (2).jpg" data-alt="Homepage">
+                                    <img src="assets/SMILE BRIGHT/1 (2).jpg" alt="Homepage">
+                                </div>
+                                <div class="thumb-item" data-src="assets/SMILE BRIGHT/2.jpg" data-alt="Services">
+                                    <img src="assets/SMILE BRIGHT/2.jpg" alt="Services">
+                                </div>
+                                <div class="thumb-item" data-src="assets/SMILE BRIGHT/3.jpg" data-alt="Appointment Booking">
+                                    <img src="assets/SMILE BRIGHT/3.jpg" alt="Appointment Booking">
+                                </div>
+                                <div class="thumb-item" data-src="assets/SMILE BRIGHT/4 (2).jpg" data-alt="Patient Portal">
+                                    <img src="assets/SMILE BRIGHT/4 (2).jpg" alt="Patient Portal">
+                                </div>
+                                <div class="thumb-item" data-src="assets/SMILE BRIGHT/5.jpg" data-alt="Admin Dashboard">
+                                    <img src="assets/SMILE BRIGHT/5.jpg" alt="Admin Dashboard">
+                                </div>
+                            </div>
+                            <button class="view-all-btn" data-gallery="smilebright">
+                                <i class="fas fa-expand"></i>
+                                View All Images (13)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- eTracker Student Portal -->
+                <div class="project-card" data-category="web" data-gallery="etracker-student">
+                    <div class="project-image">
+                        <img src="assets/etracker/student/1 (2).jpg" alt="eTracker - Student Portal for CVSU Extension Services">
+                        <div class="image-counter">
+                            <span>1 / 7</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="project-gallery-btn" aria-label="View Gallery">
+                                    <i class="fas fa-images"></i>
+                                </button>
+                                <a href="#" class="project-github" aria-label="View GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">eTracker - Student Portal</h3>
+                        <p class="project-description">
+                            Student interface for CVSU Imus Extension Services tracking system. 
+                            Students can register for programs, track certificates, upload documents, and monitor their progress.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        
+                        <!-- Gallery Preview -->
+                        <div class="project-gallery-preview">
+                            <div class="preview-thumbnails">
+                                <div class="thumb-item active" data-src="assets/etracker/student/1 (2).jpg" data-alt="Dashboard">
+                                    <img src="assets/etracker/student/1 (2).jpg" alt="Dashboard">
+                                </div>
+                                <div class="thumb-item" data-src="assets/etracker/student/2.jpg" data-alt="Programs">
+                                    <img src="assets/etracker/student/2.jpg" alt="Programs">
+                                </div>
+                                <div class="thumb-item" data-src="assets/etracker/student/3.jpg" data-alt="Documents">
+                                    <img src="assets/etracker/student/3.jpg" alt="Documents">
+                                </div>
+                                <div class="thumb-item" data-src="assets/etracker/student/4 (2).jpg" data-alt="Certificates">
+                                    <img src="assets/etracker/student/4 (2).jpg" alt="Certificates">
+                                </div>
+                                <div class="thumb-item" data-src="assets/etracker/student/5.jpg" data-alt="Profile">
+                                    <img src="assets/etracker/student/5.jpg" alt="Profile">
+                                </div>
+                            </div>
+                            <button class="view-all-btn" data-gallery="etracker-student">
+                                <i class="fas fa-expand"></i>
+                                View All Images (7)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- eTracker Faculty Portal -->
+                <div class="project-card" data-category="web" data-gallery="etracker-faculty">
+                    <div class="project-image">
+                        <img src="assets/etracker/faculty/1 (2).jpg" alt="eTracker - Faculty Portal for CVSU Extension Services">
+                        <div class="image-counter">
+                            <span>1 / 7</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="project-gallery-btn" aria-label="View Gallery">
+                                    <i class="fas fa-images"></i>
+                                </button>
+                                <a href="#" class="project-github" aria-label="View GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">eTracker - Faculty Portal</h3>
+                        <p class="project-description">
+                            Faculty interface for managing CVSU extension programs. 
+                            Faculty can upload certificates, manage student progress, verify documents, and track program completion.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        
+                        <!-- Gallery Preview -->
+                        <div class="project-gallery-preview">
+                            <div class="preview-thumbnails">
+                                <div class="thumb-item active" data-src="assets/etracker/faculty/1 (2).jpg" data-alt="Dashboard">
+                                    <img src="assets/etracker/faculty/1 (2).jpg" alt="Dashboard">
+                                </div>
+                                <div class="thumb-item" data-src="assets/etracker/faculty/2.jpg" data-alt="Programs">
+                                    <img src="assets/etracker/faculty/2.jpg" alt="Programs">
+                                </div>
+                                <div class="thumb-item" data-src="assets/etracker/faculty/3.jpg" data-alt="Students">
+                                    <img src="assets/etracker/faculty/3.jpg" alt="Students">
+                                </div>
+                                <div class="thumb-item" data-src="assets/etracker/faculty/4 (2).jpg" data-alt="Certificates">
+                                    <img src="assets/etracker/faculty/4 (2).jpg" alt="Certificates">
+                                </div>
+                                <div class="thumb-item" data-src="assets/etracker/faculty/5.jpg" data-alt="Reports">
+                                    <img src="assets/etracker/faculty/5.jpg" alt="Reports">
+                                </div>
+                            </div>
+                            <button class="view-all-btn" data-gallery="etracker-faculty">
+                                <i class="fas fa-expand"></i>
+                                View All Images (7)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- eTracker Admin Portal -->
+                <div class="project-card" data-category="web" data-gallery="etracker-admin">
+                    <div class="project-image">
+                        <img src="assets/etracker/admin/1 (2).jpg" alt="eTracker - Admin Portal for CVSU Extension Services">
+                        <div class="image-counter">
+                            <span>1 / 9</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="project-gallery-btn" aria-label="View Gallery">
+                                    <i class="fas fa-images"></i>
+                                </button>
+                                <a href="#" class="project-github" aria-label="View GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">eTracker - Admin Portal</h3>
+                        <p class="project-description">
+                            Administrative dashboard for CVSU extension services management. 
+                            Complete system administration, user management, program oversight, and comprehensive reporting.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        
+                        <!-- Gallery Preview -->
+                        <div class="project-gallery-preview">
+                            <div class="preview-thumbnails">
+                                <div class="thumb-item active" data-src="assets/etracker/admin/1 (2).jpg" data-alt="Dashboard">
+                                    <img src="assets/etracker/admin/1 (2).jpg" alt="Dashboard">
+                                </div>
+                                <div class="thumb-item" data-src="assets/etracker/admin/2.jpg" data-alt="User Management">
+                                    <img src="assets/etracker/admin/2.jpg" alt="User Management">
+                                </div>
+                                <div class="thumb-item" data-src="assets/etracker/admin/3.jpg" data-alt="Programs">
+                                    <img src="assets/etracker/admin/3.jpg" alt="Programs">
+                                </div>
+                                <div class="thumb-item" data-src="assets/etracker/admin/4 (2).jpg" data-alt="Reports">
+                                    <img src="assets/etracker/admin/4 (2).jpg" alt="Reports">
+                                </div>
+                                <div class="thumb-item" data-src="assets/etracker/admin/5.jpg" data-alt="Analytics">
+                                    <img src="assets/etracker/admin/5.jpg" alt="Analytics">
+                                </div>
+                            </div>
+                            <button class="view-all-btn" data-gallery="etracker-admin">
+                                <i class="fas fa-expand"></i>
+                                View All Images (9)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Student Management API -->
+                <div class="project-card" data-category="api" data-gallery="student-api">
+                    <div class="project-image">
+                        <img src="assets/STUDENT MANAGEMNET API/1.png" alt="Student Management API Interface">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">API Development</div>
+                        <h3 class="project-title">Student Management API</h3>
+                        <p class="project-description">
+                            A comprehensive RESTful API for student management system with CRUD operations, 
+                            authentication, and data validation. Built for efficient student record management.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">Database</span>
+                        </div>
+                        <div class="project-gallery-preview">
+                            <h4>API Documentation & Interface</h4>
+                            <div class="gallery-thumbs">
+                                <div class="thumb-item" data-src="assets/STUDENT MANAGEMNET API/1.png" data-alt="API Interface">
+                                    <img src="assets/STUDENT MANAGEMNET API/1.png" alt="API Interface">
+                                </div>
+                            </div>
+                            <button class="view-all-btn" data-gallery="student-api">
+                                <i class="fas fa-expand"></i>
+                                View API Documentation (1)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Weather API -->
+                <div class="project-card" data-category="api" data-gallery="weather-api">
+                    <div class="project-image">
+                        <img src="assets/WEATHER/1 (3).jpg" alt="Weather API Interface">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">API Development</div>
+                        <h3 class="project-title">Weather API Service</h3>
+                        <p class="project-description">
+                            Modern weather forecasting API with real-time data integration, location-based services, 
+                            and comprehensive weather analytics. Features responsive design and detailed weather insights.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Weather API</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Geolocation</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                        <div class="project-gallery-preview">
+                            <h4>Weather Interface & Features</h4>
+                            <div class="gallery-thumbs">
+                                <div class="thumb-item" data-src="assets/WEATHER/1 (3).jpg" data-alt="Weather Interface">
+                                    <img src="assets/WEATHER/1 (3).jpg" alt="Weather Interface">
+                                </div>
+                            </div>
+                            <button class="view-all-btn" data-gallery="weather-api">
+                                <i class="fas fa-expand"></i>
+                                View Weather Interface (1)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience & Education</h2>
+                <p class="section-subtitle">My professional experience and academic background</p>
+            </div>
+            
+            <div class="experience-content">
+                <div class="timeline">
+                    <!-- Freelance Experience -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <h3 class="job-title">Freelance Web Developer</h3>
+                                    <div class="company-info">
+                                        <span class="company-name">Independent Contractor</span>
+                                        <span class="job-period">2023 - Present</span>
+                                    </div>
+                                </div>
+                                <div class="experience-description">
+                                    <p>
+                                        Working as a freelance web developer, creating custom websites and web applications 
+                                        for various clients. Specializing in modern web technologies and delivering 
+                                        high-quality, responsive solutions.
+                                    </p>
+                                    <ul class="achievements">
+                                        <li>Developed custom websites for multiple clients with diverse requirements</li>
+                                        <li>Handled complete project lifecycle from consultation to deployment</li>
+                                        <li>Specialized in responsive design and modern web development practices</li>
+                                        <li>Successfully delivered projects on time and within budget</li>
+                                    </ul>
+                                </div>
+                                <div class="experience-tech">
+                                    <span class="tech-badge">HTML5</span>
+                                    <span class="tech-badge">CSS3</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">PHP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OJT Experience -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <h3 class="job-title">On-the-Job Training (OJT) - IT Department</h3>
+                                    <div class="company-info">
+                                        <span class="company-name">Cavite State University - Imus Campus</span>
+                                        <span class="job-period">March 2025</span>
+                                    </div>
+                                </div>
+                                <div class="experience-description">
+                                    <p>
+                                        Completed comprehensive on-the-job training at Cavite State University, working on 
+                                        real-world projects and administrative tasks within the IT department.
+                                    </p>
+                                    <ul class="achievements">
+                                        <li>Enhanced the Paperazzi system for patent search functionality in Indang</li>
+                                        <li>Developed and maintained the eTracker system for extension services</li>
+                                        <li>Performed various administrative tasks and IT support functions</li>
+                                        <li>Collaborated with university staff on technology solutions</li>
+                                        <li>Gained hands-on experience in enterprise-level system development</li>
+                                    </ul>
+                                </div>
+                                <div class="experience-tech">
+                                    <span class="tech-badge">System Development</span>
+                                    <span class="tech-badge">Database Management</span>
+                                    <span class="tech-badge">Web Development</span>
+                                    <span class="tech-badge">IT Support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker education"></div>
+                        <div class="timeline-content">
+                            <div class="experience-card education-card">
+                                <div class="experience-header">
+                                    <h3 class="job-title">Bachelor's Degree in Information Technology</h3>
+                                    <div class="company-info">
+                                        <span class="company-name">Cavite State University</span>
+                                        <span class="job-period">2021 - 2025</span>
+                                    </div>
+                                </div>
+                                <div class="experience-description">
+                                    <p>
+                                        Currently pursuing my Bachelor's degree in Information Technology with a focus on 
+                                        web development, software engineering, and modern programming practices.
+                                    </p>
+                                    <ul class="achievements">
+                                        <li>Specialized in front-end and full-stack web development</li>
+                                        <li>Completed multiple projects using modern web technologies</li>
+                                        <li>Active participation in system development projects</li>
+                                        <li>Strong foundation in programming and software engineering principles</li>
+                                    </ul>
+                                </div>
+                                <div class="experience-tech">
+                                    <span class="tech-badge">HTML5</span>
+                                    <span class="tech-badge">CSS3</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">Node.js</span>
+                                    <span class="tech-badge">Python</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to start your next project? Let's connect and make it happen</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-intro">
+                    <div class="contact-text">
+                        <h3>Let's Build Something Amazing Together!</h3>
+                        <p>
+                            I'm always excited to take on new challenges and collaborate on innovative projects. 
+                            Whether you're looking for a web developer, need technical consultation, or just want to discuss ideas, 
+                            I'd love to hear from you!
+                        </p>
+                        <div class="contact-cta">
+                            <p><strong>Available for:</strong></p>
+                            <ul class="availability-list">
+                                <li><i class="fas fa-check-circle"></i> Freelance Web Development</li>
+                                <li><i class="fas fa-check-circle"></i> Full-time Opportunities</li>
+                                <li><i class="fas fa-check-circle"></i> Technical Consultation</li>
+                                <li><i class="fas fa-check-circle"></i> Project Collaboration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-cards">
+                    <div class="contact-card primary-card">
+                        <div class="card-header">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4>Email Me</h4>
+                        </div>
+                        <div class="card-content">
+                            <a href="mailto:kimberlylouiseeeee@gmail.com" class="contact-link">
+                                kimberlylouiseeeee@gmail.com
+                            </a>
+                            <p class="contact-note">Best for project inquiries and collaborations</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="card-header">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h4>Call Me</h4>
+                        </div>
+                        <div class="card-content">
+                            <a href="tel:+639083144520" class="contact-link">
+                                +63 908 314 4520
+                            </a>
+                            <p class="contact-note">Available Monday - Friday, 9AM - 6PM</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="card-header">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4>Location</h4>
+                        </div>
+                        <div class="card-content">
+                            <span class="contact-link">
+                                Imus, Cavite, Philippines
+                            </span>
+                            <p class="contact-note">Open to remote work opportunities</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-section">
+                    <h4 class="social-title">Connect With Me</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/kimberly-ravalo-5ba28311a/" class="social-link" aria-label="LinkedIn" title="Connect on LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/kimberlylouise" class="social-link" aria-label="GitHub" title="Check out my code" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.facebook.com/kimberlylouiseravalo/" class="social-link" aria-label="Facebook" title="Follow me on Facebook" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://profile.indeed.com/?hl=en_PH&co=PH&from=gnav-homepage" class="social-link" aria-label="Indeed" title="View my Indeed profile" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Indeed</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-footer">
+                    <div class="quick-response">
+                        <i class="fas fa-clock"></i>
+                        <p><strong>Quick Response:</strong> I typically respond within 24 hours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Your Name. All rights reserved.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Gallery Modal - FIXED VERSION -->
+    <div id="gallery-modal" class="gallery-modal">
+        <div class="gallery-modal-content">
+            <div class="gallery-header">
+                <h3 class="gallery-title">Paperazzi Gallery</h3>
+                <button class="gallery-close" aria-label="Close Gallery">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="gallery-main">
+                <button class="gallery-nav gallery-prev" aria-label="Previous Image">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="gallery-display">
+                    <div class="gallery-image-container">
+                        <img id="gallery-main-image" src="" alt="" class="gallery-main-img">
+                        <div class="gallery-loading" style="display: none;">
+                            <div class="loading-spinner"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-counter">
+                            <span id="gallery-current">1</span> / <span id="gallery-total">5</span>
+                        </div>
+                        <div class="gallery-description" id="gallery-description">
+                            Main user interface of the Paperazzi coin-operated printing system
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="gallery-nav gallery-next" aria-label="Next Image">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="gallery-thumbnails-container">
+                <div class="gallery-thumbnails" id="gallery-thumbnails">
+                    <!-- Thumbnails will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
