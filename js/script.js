@@ -144,11 +144,18 @@ const setTheme = (theme) => {
 };
 
 const updateThemeIcon = (theme) => {
+    // Guard if toggle not present
+    if (!themeToggle) return;
     const icon = themeToggle.querySelector('i');
+    if (!icon) return;
     if (theme === 'dark') {
         icon.className = 'fas fa-sun';
+        themeToggle.setAttribute('aria-label', 'Switch to light theme');
+        themeToggle.setAttribute('title', 'Switch to light theme');
     } else {
         icon.className = 'fas fa-moon';
+        themeToggle.setAttribute('aria-label', 'Switch to dark theme');
+        themeToggle.setAttribute('title', 'Switch to dark theme');
     }
 };
 
@@ -156,11 +163,13 @@ const updateThemeIcon = (theme) => {
 setTheme(getTheme());
 
 // Theme toggle event
-themeToggle.addEventListener('click', () => {
-    const currentTheme = getTheme();
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-});
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = getTheme();
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+    });
+}
 
 // ===== INTERSECTION OBSERVER FOR ANIMATIONS =====
 const observerOptions = {
@@ -830,8 +839,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ===== PROJECT GALLERY - ENHANCED VERSION =====
-function initProjectGallery() {
+// ===== PROJECT GALLERY - CORRECTED VERSION =====
+document.addEventListener('DOMContentLoaded', function() {
     console.log('🎨 Initializing Project Gallery...');
     
     // Gallery data for all projects
@@ -918,46 +927,6 @@ function initProjectGallery() {
                     src: "assets/SMILE BRIGHT/5.jpg",
                     alt: "Admin Dashboard",
                     description: "Administrative panel for clinic management and patient oversight"
-                },
-                {
-                    src: "assets/SMILE BRIGHT/6.jpg",
-                    alt: "Doctor Profiles",
-                    description: "Information about dental professionals and their specializations"
-                },
-                {
-                    src: "assets/SMILE BRIGHT/7.jpg",
-                    alt: "Treatment Plans",
-                    description: "Detailed treatment planning and procedure management system"
-                },
-                {
-                    src: "assets/SMILE BRIGHT/8.jpg",
-                    alt: "Patient Records",
-                    description: "Comprehensive patient medical history and records management"
-                },
-                {
-                    src: "assets/SMILE BRIGHT/9.jpg",
-                    alt: "Billing & Payments",
-                    description: "Integrated billing system and payment processing interface"
-                },
-                {
-                    src: "assets/SMILE BRIGHT/10.jpg",
-                    alt: "Schedule Management",
-                    description: "Calendar and scheduling system for appointments and staff"
-                },
-                {
-                    src: "assets/SMILE BRIGHT/11.jpg",
-                    alt: "Reports & Analytics",
-                    description: "Business intelligence and reporting dashboard for clinic insights"
-                },
-                {
-                    src: "assets/SMILE BRIGHT/12.jpg",
-                    alt: "Contact & Location",
-                    description: "Contact information, location details, and clinic hours"
-                },
-                {
-                    src: "assets/SMILE BRIGHT/13.jpg",
-                    alt: "Mobile Responsive",
-                    description: "Mobile-friendly interface for appointments and patient access"
                 }
             ]
         },
@@ -988,16 +957,6 @@ function initProjectGallery() {
                     src: "assets/etracker/student/5.jpg",
                     alt: "Profile Management",
                     description: "Manage student profile information and account settings"
-                },
-                {
-                    src: "assets/etracker/student/6.jpg",
-                    alt: "Program Progress",
-                    description: "Monitor progress and completion status of enrolled programs"
-                },
-                {
-                    src: "assets/etracker/student/7.jpg",
-                    alt: "Notifications & Updates",
-                    description: "Receive important notifications and program updates"
                 }
             ]
         },
@@ -1028,16 +987,6 @@ function initProjectGallery() {
                     src: "assets/etracker/faculty/5.jpg",
                     alt: "Reports & Analytics",
                     description: "Generate detailed reports on program performance and student outcomes"
-                },
-                {
-                    src: "assets/etracker/faculty/6.jpg",
-                    alt: "Document Verification",
-                    description: "Review and verify student submitted documents"
-                },
-                {
-                    src: "assets/etracker/faculty/7.jpg",
-                    alt: "Faculty Profile",
-                    description: "Manage faculty profile and teaching credentials"
                 }
             ]
         },
@@ -1068,26 +1017,6 @@ function initProjectGallery() {
                     src: "assets/etracker/admin/5.jpg",
                     alt: "Analytics Dashboard",
                     description: "Advanced analytics and insights for system performance"
-                },
-                {
-                    src: "assets/etracker/admin/6.jpg",
-                    alt: "System Configuration",
-                    description: "Configure system settings and administrative preferences"
-                },
-                {
-                    src: "assets/etracker/admin/7.jpg",
-                    alt: "Audit & Monitoring",
-                    description: "System audit trails and monitoring capabilities"
-                },
-                {
-                    src: "assets/etracker/admin/8.jpg",
-                    alt: "Data Management",
-                    description: "Database management and data backup/restore functions"
-                },
-                {
-                    src: "assets/etracker/admin/9.jpg",
-                    alt: "Integration Settings",
-                    description: "External system integrations and API management"
                 }
             ]
         },
@@ -1097,7 +1026,7 @@ function initProjectGallery() {
                 {
                     src: "assets/STUDENT MANAGEMNET API/1.png",
                     alt: "Student Management API Interface",
-                    description: "Comprehensive RESTful API documentation and testing interface for student management operations including CRUD functionality, authentication, and data validation"
+                    description: "Comprehensive RESTful API documentation and testing interface for student management operations"
                 }
             ]
         },
@@ -1107,7 +1036,7 @@ function initProjectGallery() {
                 {
                     src: "assets/WEATHER/1 (3).jpg",
                     alt: "Weather API Interface",
-                    description: "Modern weather forecasting application with real-time data integration, location-based services, detailed weather analytics, and responsive design for optimal user experience across all devices"
+                    description: "Modern weather forecasting application with real-time data integration and responsive design"
                 }
             ]
         }
@@ -1116,7 +1045,7 @@ function initProjectGallery() {
     let currentGallery = null;
     let currentImageIndex = 0;
 
-    // Get modal elements with enhanced error checking
+    // Get modal elements
     const modal = document.getElementById('gallery-modal');
     const galleryTitle = document.querySelector('.gallery-title');
     const mainImage = document.getElementById('gallery-main-image');
@@ -1128,133 +1057,116 @@ function initProjectGallery() {
     const prevBtn = document.querySelector('.gallery-prev');
     const nextBtn = document.querySelector('.gallery-next');
 
-    console.log('🔍 Modal elements check:', {
-        modal: !!modal,
-        galleryTitle: !!galleryTitle,
-        mainImage: !!mainImage,
-        galleryDescription: !!galleryDescription,
-        thumbnailsContainer: !!thumbnailsContainer,
-        closeBtn: !!closeBtn
-    });
-
     if (!modal) {
-        console.error('❌ Gallery modal not found! Make sure the modal HTML exists.');
+        console.error('❌ Gallery modal not found!');
         return;
     }
 
-    // Enhanced click handler with better debugging
+    console.log('✅ Gallery elements found successfully');
+
+    // Enhanced click handler for gallery buttons
     document.addEventListener('click', function(e) {
-        const target = e.target;
-        const classList = target.className;
+        const target = e.target.closest('button') || e.target;
         
-        console.log('🖱️ Click detected:', {
+        // Debug logging
+        console.log('🖱️ Click detected on:', {
             tagName: target.tagName,
-            className: classList,
-            id: target.id,
-            closestGallery: !!target.closest('[data-gallery]'),
-            closestViewAll: !!target.closest('.view-all-btn'),
-            closestGalleryBtn: !!target.closest('.project-gallery-btn')
+            className: target.className,
+            hasGalleryBtn: target.classList.contains('project-gallery-btn'),
+            hasViewAllBtn: target.classList.contains('view-all-btn'),
+            closestCard: !!target.closest('.project-card'),
+            dataGallery: target.closest('[data-gallery]')?.dataset.gallery
         });
 
-        // Handle gallery button clicks - Enhanced detection
-        if (target.closest('.project-gallery-btn') || 
-            target.closest('.view-all-btn') || 
+        // Handle gallery button clicks
+        if (target.classList.contains('project-gallery-btn') || 
             target.classList.contains('view-all-btn') ||
-            target.classList.contains('project-gallery-btn')) {
+            target.closest('.project-gallery-btn') ||
+            target.closest('.view-all-btn')) {
             
             e.preventDefault();
             e.stopPropagation();
+            
             console.log('✅ Gallery button clicked!');
             
-            const galleryElement = target.closest('[data-gallery]');
-            if (!galleryElement) {
-                console.error('❌ No gallery element found with data-gallery attribute');
+            const projectCard = target.closest('.project-card');
+            if (!projectCard) {
+                console.error('❌ No project card found');
                 return;
             }
             
-            const galleryId = galleryElement.dataset.gallery;
-            console.log('🎯 Gallery ID found:', galleryId);
+            const galleryId = projectCard.dataset.gallery;
+            console.log('🎯 Gallery ID:', galleryId);
             
             if (galleryId && galleryData[galleryId]) {
                 console.log('🚀 Opening gallery:', galleryId);
                 openGallery(galleryId, 0);
             } else {
-                console.error('❌ Gallery not found:', galleryId, 'Available:', Object.keys(galleryData));
-            }
-            return;
-        }
-
-        // Handle thumbnail clicks in project cards
-        if (target.closest('.thumb-item')) {
-            console.log('🖼️ Thumbnail clicked in project card');
-            const thumbItem = target.closest('.thumb-item');
-            const projectCard = thumbItem.closest('.project-card');
-            const mainImg = projectCard.querySelector('.project-image > img');
-            const counter = projectCard.querySelector('.image-counter span');
-            const allThumbs = projectCard.querySelectorAll('.thumb-item');
-            
-            // Remove active class from all thumbnails
-            allThumbs.forEach(t => t.classList.remove('active'));
-            
-            // Add active class to clicked thumbnail
-            thumbItem.classList.add('active');
-            
-            // Update main image with smooth transition
-            if (mainImg) {
-                mainImg.style.opacity = '0.7';
-                
-                setTimeout(() => {
-                    mainImg.src = thumbItem.dataset.src;
-                    mainImg.alt = thumbItem.dataset.alt;
-                    
-                    // Update counter
-                    const index = Array.from(allThumbs).indexOf(thumbItem) + 1;
-                    if (counter) {
-                        counter.textContent = `${index} / ${allThumbs.length}`;
-                    }
-                    
-                    // Fade back in
-                    mainImg.onload = () => {
-                        mainImg.style.opacity = '1';
-                    };
-                }, 150);
+                console.error('❌ Gallery not found:', galleryId);
             }
             return;
         }
 
         // Handle modal close
         if (target === modal || target.closest('.gallery-close')) {
-            console.log('❌ Closing gallery');
             closeGallery();
+            return;
+        }
+
+        // Handle navigation buttons
+        if (target.closest('.gallery-prev')) {
+            showPreviousImage();
+            return;
+        }
+        if (target.closest('.gallery-next')) {
+            showNextImage();
             return;
         }
 
         // Handle thumbnail clicks in modal
         if (target.closest('.gallery-thumb')) {
-            console.log('🖼️ Modal thumbnail clicked');
-            const index = parseInt(target.closest('.gallery-thumb').dataset.index);
+            const thumb = target.closest('.gallery-thumb');
+            const index = parseInt(thumb.dataset.index);
             if (!isNaN(index)) {
                 showImage(index);
             }
             return;
         }
 
-        // Handle navigation buttons
-        if (target.closest('.gallery-prev')) {
-            console.log('⬅️ Previous button clicked');
-            showPreviousImage();
-            return;
-        }
-        if (target.closest('.gallery-next')) {
-            console.log('➡️ Next button clicked');
-            showNextImage();
+        // Handle thumbnail clicks in project cards
+        if (target.closest('.thumb-item')) {
+            const thumbItem = target.closest('.thumb-item');
+            const projectCard = thumbItem.closest('.project-card');
+            const mainImg = projectCard.querySelector('.project-image img');
+            const counter = projectCard.querySelector('.image-counter span');
+            const allThumbs = projectCard.querySelectorAll('.thumb-item');
+            
+            // Remove active class from all thumbnails
+            allThumbs.forEach(t => t.classList.remove('active'));
+            thumbItem.classList.add('active');
+            
+            // Update main image
+            if (mainImg) {
+                mainImg.style.opacity = '0.7';
+                setTimeout(() => {
+                    mainImg.src = thumbItem.dataset.src;
+                    mainImg.alt = thumbItem.dataset.alt;
+                    mainImg.style.opacity = '1';
+                    
+                    // Update counter
+                    const index = Array.from(allThumbs).indexOf(thumbItem) + 1;
+                    if (counter) {
+                        counter.textContent = `${index} / ${allThumbs.length}`;
+                    }
+                }, 150);
+            }
             return;
         }
     });
 
     // Keyboard navigation
     document.addEventListener('keydown', function(e) {
-        if (!modal || !modal.classList.contains('active')) return;
+        if (!modal.classList.contains('active')) return;
 
         switch(e.key) {
             case 'Escape':
@@ -1279,11 +1191,6 @@ function initProjectGallery() {
             return;
         }
 
-        if (!modal) {
-            console.error('❌ Modal element not found');
-            return;
-        }
-
         // Set gallery title
         if (galleryTitle) {
             galleryTitle.textContent = currentGallery.title;
@@ -1300,7 +1207,7 @@ function initProjectGallery() {
         // Show initial image
         showImage(currentImageIndex);
 
-        // Show modal with animation
+        // Show modal
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
         
@@ -1318,7 +1225,6 @@ function initProjectGallery() {
         console.log('✅ Gallery closed');
     }
 
-    // ===== ENHANCED GALLERY THUMBNAIL FUNCTIONALITY =====
     function createThumbnails() {
         if (!thumbnailsContainer || !currentGallery) {
             console.error('❌ Thumbnails container or gallery data missing');
@@ -1333,7 +1239,6 @@ function initProjectGallery() {
             thumbDiv.className = 'gallery-thumb';
             thumbDiv.dataset.index = index;
             
-            // Set active state for current image
             if (index === currentImageIndex) {
                 thumbDiv.classList.add('active');
             }
@@ -1343,7 +1248,6 @@ function initProjectGallery() {
             thumbImg.alt = image.alt;
             thumbImg.loading = 'lazy';
             
-            // Add error handling for thumbnail images
             thumbImg.onerror = function() {
                 console.warn('⚠️ Thumbnail failed to load:', image.src);
                 thumbDiv.style.background = 'var(--gradient-primary)';
@@ -1357,7 +1261,6 @@ function initProjectGallery() {
         console.log('✅ Thumbnails created:', currentGallery.images.length);
     }
 
-    // Enhanced showImage function with better thumbnail updates
     function showImage(index) {
         if (!currentGallery || index < 0 || index >= currentGallery.images.length) {
             console.error('❌ Invalid image index or gallery missing');
@@ -1368,11 +1271,8 @@ function initProjectGallery() {
         currentImageIndex = index;
         const image = currentGallery.images[index];
 
-        // Update main image with loading state
+        // Update main image
         if (mainImage) {
-            const loading = modal?.querySelector('.gallery-loading');
-            if (loading) loading.style.display = 'flex';
-
             mainImage.style.opacity = '0.7';
             
             setTimeout(() => {
@@ -1381,15 +1281,11 @@ function initProjectGallery() {
                 
                 mainImage.onload = () => {
                     mainImage.style.opacity = '1';
-                    if (loading) loading.style.display = 'none';
                     console.log('✅ Image loaded successfully');
                 };
                 
                 mainImage.onerror = () => {
                     console.error('❌ Failed to load image:', image.src);
-                    if (loading) loading.style.display = 'none';
-                    // Show error state
-                    mainImage.alt = 'Failed to load image';
                     mainImage.style.opacity = '1';
                 };
             }, 150);
@@ -1405,14 +1301,13 @@ function initProjectGallery() {
             galleryCounter.textContent = index + 1;
         }
 
-        // Update active thumbnail with smooth transition
+        // Update active thumbnail
         const thumbnails = thumbnailsContainer?.querySelectorAll('.gallery-thumb');
         if (thumbnails) {
             thumbnails.forEach((thumb, i) => {
                 thumb.classList.remove('active');
                 if (i === index) {
                     thumb.classList.add('active');
-                    // Scroll thumbnail into view if needed
                     thumb.scrollIntoView({ 
                         behavior: 'smooth', 
                         block: 'nearest', 
@@ -1438,4 +1333,4 @@ function initProjectGallery() {
     }
 
     console.log('✅ Project Gallery initialized successfully!');
-}
+});

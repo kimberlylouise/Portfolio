@@ -1183,15 +1183,12 @@ a:hover {
 
 .contact-link {
     display: block;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 600;
     color: var(--primary-color);
     text-decoration: none;
     margin-bottom: var(--spacing-sm);
     transition: color var(--transition-fast);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    line-height: 1.4;
 }
 
 .contact-link:hover {
@@ -2459,6 +2456,7 @@ a:hover {
 .gallery-modal.active {
     opacity: 1;
     visibility: visible;
+    display: flex !important;
 }
 
 .gallery-modal-content {
